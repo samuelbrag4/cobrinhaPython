@@ -54,3 +54,18 @@ change_to = direction
 
 # Pontuação inicial
 score = 0
+
+# Função para exibir a pontuação na tela do jogo
+def show_score(choice, color, font, size):
+    
+    # Criando objeto de fonte score_font
+    score_font = pygame.font.SysFont(font, size)
+    
+    # Criação do objeto de superfície de exibição score_surface
+    score_surface = score_font.render('Pontuação: ' + str(score), True, color)
+    
+    # Criando um objeto retangular para a superficie de texto score_surface
+    score_rect = score_surface.get_rect()
+    
+    # Exibindo o texto 
+    game_window.blit(score_surface, score_rect)
