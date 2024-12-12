@@ -28,3 +28,29 @@ game_window = pygame.display.set_mode((window_x, window_y))
 
 # Controlador de FPS (frames por segundo)
 fps = pygame.time.Clock()
+
+# Posição padrão da cobra
+snake_position = [100, 50]
+
+# Definindo os primeiros 4 blocos do corpo da cobra
+snake_body = [
+    [100, 50],
+    [90, 50],
+    [80, 50],
+    [70, 50]
+]
+
+# Posição da comida da cobra
+food_position = [
+    random.randrange(1, (window_x//10)) * 10,
+    random.randrange(1, (window_y//10)) * 10
+]
+
+fruit_spawn = True
+
+# Direção padrão da cobra
+direction = 'RIGHT'
+change_to = direction
+
+# Pontuação inicial
+score = 0
